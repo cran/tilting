@@ -1,0 +1,17 @@
+b2e2eae4a4e7c90fc19585701ec2ac73 *DESCRIPTION
+be4d6e9b4f6d93ca52cbd19f0f591608 *NAMESPACE
+87f8037f50c8ce2733fde8fe42bd145a *R/col.norm.R
+69f54528b90434f6c773afacad2f2176 *R/get.thr.R
+49ba45bb9ef8415d66c64ba77e9f7eb5 *R/lse.beta.R
+cae12b4d3279be62f12f40865c56fb3c *R/projection.R
+f7ade2b38864db9bf8c0bd4230d8ba8e *R/select.model.R
+4cd584c04f82a61ccf8598569819c822 *R/thresh.R
+e7332f9ebaa3edc63f19175ce82f8f4a *R/tilting.R
+be586035b90a619cf66fe36f327fd9c3 *man/col.norm.Rd
+4c533e0d5a1eb767502b99055dc467c1 *man/get.thr.Rd
+afe3fa399146901ccbb23fc7751f418c *man/lse.beta.Rd
+95b80e3d483f6c2dce9afb6815ac6b84 *man/projection.Rd
+7fe7b39983e16dd3c8598db3f18e3293 *man/select.model.Rd
+7ee70e70d5a1a6f9141b93ad7c0c1a9a *man/thresh.Rd
+8431f4c8c83b6bd64f0354ccefa901b9 *man/tilting-package.Rd
+9513446362079f0750784e4bfad66f11 *man/tilting.Rd
