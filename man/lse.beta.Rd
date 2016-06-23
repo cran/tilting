@@ -25,7 +25,7 @@ the index set on which the least squares estimate is computed.
 
 \value{
 An estimate of the coefficient vector is returned as above. 
-If active=NULL, a vector of zeros is returned.
+If active==NULL, a vector of zeros is returned.
 }
 
 \author{

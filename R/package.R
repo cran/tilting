@@ -1,3 +1,5 @@
+#library(mvtnorm)
+#package.skeleton(name="tilting")
 tilting <-
 function(X, y, thr.step=NULL, thr.rep=1, max.size=NULL, max.count=NULL, op=2, bic.gamma=1, eps=1e-10){
 
@@ -91,3 +93,69 @@ list(Score=Score, active=active, thr.seq=thr.seq, score.seq=score.seq, bic.seq=b
 
 }
 
+select.model <-
+function(bic.seq, active){
+
+temp<-which.min(bic.seq)
+return(active[1:min(temp)])
+
+}
+
+projection <-
+function(X, active=NULL){
+if(!is.null(active)){
+Xa<-X[,active, drop=FALSE]
+PI<-Xa%*%solve(t(Xa)%*%Xa)%*%t(Xa)
+} else{
+PI<-matrix(0, nrow(X), nrow(X)) 
+}
+return(PI)
+}
+
+lse.beta <-
+function(X, y, active=NULL){
+bhat<-rep(0, ncol(X))
+if(!is.null(active)){
+Xa<-X[,active, drop=FALSE]
+bhat[active]<-drop(solve(t(Xa)%*%Xa)%*%t(Xa)%*%y)
+}
+return(bhat)
+}
+
+get.thr <-
+function(C, n, p, max.num=1, alpha=NULL, step=NULL){
+corr<-abs(C[upper.tri(C)])
+sc<-sort(corr, decreasing=FALSE)
+thr.seq<-NULL
+len<-p*(p-1)/2
+if(is.null(alpha)) alpha<-1/sqrt(p)
+if(is.null(step)) step<-max(1, floor(len/p/n))
+
+for(k in 1:max.num){
+D<-rmvnorm(n, sigma=diag(1, p))
+D<-t(t(D)/col.norm(D))
+D<-t(D)%*%D
+ref<-abs(D[upper.tri(D)])
+i<-1
+while(i<=len){
+c<-sc[i]
+prob<-sum(ref>c)/len
+if(prob<=(len-i+1)/len*alpha) break
+i<-i+step
+}
+thr.seq<-c(thr.seq, c)
+}
+thr<-median(thr.seq)
+list(thr.seq=thr.seq, thr=thr)
+}
+
+thresh <-
+function(C, alph, eps=1e-10){
+C[abs(C)<alph+eps]<-0
+return(C)
+}
+
+col.norm <-
+function(X){
+return(apply(X, 2, function(x){sqrt(sum(x^2))}))
+}

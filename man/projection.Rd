@@ -21,7 +21,7 @@ an index set of the columns of X.
 }
 
 \value{
-Returns the projection matrix onto the columns of "X" whose indices are included in "active". When active=NULL, a null matrix is returned.
+Returns the projection matrix onto the columns of "X" whose indices are included in "active". When active==NULL, a null matrix is returned.
 }
 
 \author{
