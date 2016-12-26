@@ -26,3 +26,4 @@ A vector containing the L2 norm of the columns of X is returned.
 \author{
 Haeran Cho
 }
+

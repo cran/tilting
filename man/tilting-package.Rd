@@ -6,15 +6,15 @@ Variable Selection via Tilted Correlation Screening Algorithm
 }
 
 \description{
-Implements an algorithm for variable selection in high-dimensional linear regression using the "tilted correlation", a new way of measuring the contribution of each variable to the response which takes into account high correlations among the variables in a data-driven way. 
+Implements an algorithm for variable selection in high-dimensional linear regression using the "tilted correlation", a way of measuring the contribution of each variable to the response which takes into account high correlations among the variables in a data-driven way.
 }
 
 \details{
 \tabular{ll}{
 Package: \tab tilting\cr
 Type: \tab Package\cr
-Version: \tab 1.1\cr
-Date: \tab 2016-06-20\cr
+Version: \tab 1.1.1\cr
+Date: \tab 2016-12-22\cr
 License: \tab GPL (>= 2)\cr
 LazyLoad: \tab yes\cr
 }
@@ -22,7 +22,9 @@ LazyLoad: \tab yes\cr
 The main function of the package is \code{\link{tilting}}.
 
 }
-\author{Haeran Cho
+
+\author{Haeran Cho, Piotr Fryzlewicz
+
 Maintainer: Haeran Cho <haeran.cho@bristol.ac.ukk>
 }
 

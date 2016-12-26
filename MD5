@@ -1,11 +1,11 @@
-26056ce0b515b322ff7617c059a161dd *DESCRIPTION
-1d6afef368ee007c7cbe4d1ac6f17af6 *NAMESPACE
+7ce749aad249156c23ac2065637a02d7 *DESCRIPTION
+3dfba829b1fced3c5942223078ac2c70 *NAMESPACE
 096fb6634009cea14359de8936badce0 *R/package.R
-be586035b90a619cf66fe36f327fd9c3 *man/col.norm.Rd
+96d4acbfd1bf2a71b9c25724ea59cb59 *man/col.norm.Rd
 c92fe1bf1c54eaa1d86a62e53e859ab0 *man/get.thr.Rd
 e7b55e77af6a9fefeaebfad71a8ccedf *man/lse.beta.Rd
 0a24f35aa2c791b5a26f4f5c0404ea57 *man/projection.Rd
 420b7424072a39f6e910e58e667f2647 *man/select.model.Rd
 7ee70e70d5a1a6f9141b93ad7c0c1a9a *man/thresh.Rd
-7a189266366202577c7d3106b64694be *man/tilting-package.Rd
-acd0e158519ca76bfa6f67e99108cbca *man/tilting.Rd
+4067466b6aeeb3b7b034b6aab48aeb15 *man/tilting-package.Rd
+a5a862ab2f857edd66d13b111eb9f100 *man/tilting.Rd
